@@ -63,4 +63,15 @@ public class SuperArray
     }
     return newstr;
   }
+  public boolean contains(String s)
+  {
+    for (int element = 0; element < size; element++)
+    {
+      if (data[element].equals(s))
+      {
+        return true;
+      }
+    }
+    return false;
+  }
 }
