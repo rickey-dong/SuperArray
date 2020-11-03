@@ -45,4 +45,22 @@ public class SuperArray
   {
     return size == 0;
   }
+  public String toString()
+  {
+    String newstr = "[";
+    for (int element = 0; element < size; element++)
+    {
+      if (element == (size - 1))
+      {
+        newstr = newstr + data[element];
+        newstr = newstr + "]";
+      }
+      else
+      {
+        newstr = newstr + data[element];
+        newstr = newstr + ", ";
+      }
+    }
+    return newstr;
+  }
 }

@@ -31,5 +31,7 @@ public class SuperArrayTester
       System.out.println( words.get(i) );
     }
     System.out.println("should print:\nkani\nuni\nebi");
+    System.out.println(laughter.isEmpty() + " should be false");
+    System.out.println(laughter);
   }
 }
