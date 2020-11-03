@@ -7,6 +7,11 @@ public class SuperArray
     size = 0;
     data = new String[10];
   }
+  public SuperArray(int InitialCapacity)
+  {
+    size = 0;
+    data = new String[InitialCapacity];
+  }
   public int size()
   {
     return size;
