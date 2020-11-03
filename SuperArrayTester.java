@@ -7,5 +7,7 @@ public class SuperArrayTester
     a1.add("lol");
     System.out.println(a1.size() + " should be 1");
     System.out.println(a1.get(0) + " should be lol");
+    System.out.println(a1.set(0, "LOL") + " should be lol");
+    System.out.println(a1.get(0) + " should be LOL");
   }
 }
