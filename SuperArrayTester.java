@@ -7,6 +7,7 @@ public class SuperArrayTester
     laughter.add("lol");
     System.out.println(laughter.size() + " should be 1");
     System.out.println(laughter.get(0) + " should be lol");
+    System.out.println(laughter.get(1) + " should be null");
     System.out.println(laughter.set(0, "LOL") + " should be lol");
     System.out.println(laughter.get(0) + " should be LOL");
     laughter.add("lel");
@@ -33,5 +34,9 @@ public class SuperArrayTester
     System.out.println("should print:\nkani\nuni\nebi");
     System.out.println(laughter.isEmpty() + " should be false");
     System.out.println(laughter);
+    laughter.clear();
+    System.out.println(laughter.size() + " should be 0");
+    System.out.println(laughter.get(0) + " should be null");
+    System.out.println(laughter.get(1) + " should be null");
   }
 }

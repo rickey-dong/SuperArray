@@ -46,6 +46,14 @@ public class SuperArray
     }
     data = largerArray;
   }
+  public void clear()
+  {
+    for (int element = 0; element < size; element++)
+    {
+      data[element] = null;
+    }
+    size = 0;
+  }
   public boolean isEmpty()
   {
     return size == 0;
