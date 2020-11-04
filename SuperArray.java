@@ -39,7 +39,7 @@ public class SuperArray
   }
   private void resize()
   {
-    String[] largerArray = new String[(data.length + 1)];
+    String[] largerArray = new String[(data.length * 2)];
     for (int value = 0; value < data.length; value++)
     {
       largerArray[value] = data[value];
@@ -79,4 +79,11 @@ public class SuperArray
     }
     return false;
   }
+  //public void add(int index, String element)
+  //{
+    //if (index < size)
+    //{
+
+    //}
+  //}
 }
