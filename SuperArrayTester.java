@@ -34,6 +34,8 @@ public class SuperArrayTester
     System.out.println("should print:\nkani\nuni\nebi");
     System.out.println(laughter.isEmpty() + " should be false");
     System.out.println(laughter);
+    System.out.println(laughter.contains("xd") + " should be true");
+    System.out.println(laughter.contains("hm") + " should be false");
     laughter.clear();
     System.out.println(laughter.size() + " should be 0");
     System.out.println(laughter.get(0) + " should be null");
