@@ -123,4 +123,15 @@ public class SuperArray
     }
     return removed;
   }
+  public int indexOf(String s)
+  {
+    for (int index = 0; index < size; index++)
+    {
+      if (data[index] == s)
+      {
+        return index;
+      }
+    }
+    return -1;
+  }
 }
