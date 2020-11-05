@@ -106,4 +106,21 @@ public class SuperArray
       }
     }
   }
+  public String remove(int index)
+  {
+    String removed = data[index];
+    for (int tempIndex = index; tempIndex <= size - 1; tempIndex++)
+    {
+      if (tempIndex == (size - 1))
+      {
+        data[tempIndex] = null;
+        size = size - 1;
+      }
+      else
+      {
+        data[tempIndex] = data[tempIndex+1];
+      }
+    }
+    return removed;
+  }
 }
