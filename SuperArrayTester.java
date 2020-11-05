@@ -44,16 +44,16 @@ public class SuperArrayTester
     System.out.println(laughter.get(1) + " should be null");
     SuperArray food = new SuperArray(3); //[null, null, null]
     food.add("cheese");
-    food.add(null);
-    food.add("pizza"); //[cheese,null,pizza]
-    food.add(1,"crust"); //[cheese,crust,null,pizza]
-    System.out.println(food + " should be [cheese, crust, null, pizza]");
-    food.add(3,"pepper"); //[cheese,crust,null,pepper,pizza]
-    System.out.println(food + " should be [cheese, crust, null, pepper, pizza]");
+    food.add("sauce");
+    food.add("pizza"); //[cheese,sauce,pizza]
+    food.add(1,"crust"); //[cheese,crust,sauce,pizza]
+    System.out.println(food + " should be [cheese, crust, sauce, pizza]");
+    food.add(3,"pepper"); //[cheese,crust,sauce,pepper,pizza]
+    System.out.println(food + " should be [cheese, crust, sauce, pepper, pizza]");
     System.out.println(food.remove(0) + " should be cheese");
-    System.out.println(food + " should be [crust, null, pepper, pizza]");
+    System.out.println(food + " should be [crust, sauce, pepper, pizza]");
     System.out.println(food.remove(2) + " should be pepper");
-    System.out.println(food + " should be [crust, null, pizza]");
+    System.out.println(food + " should be [crust, sauce, pizza]");
     System.out.println(food.indexOf("crust") + " should be 0");
     System.out.println(food.indexOf("pizza") + " should be 2");
   }

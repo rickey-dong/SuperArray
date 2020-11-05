@@ -125,13 +125,25 @@ public class SuperArray
   }
   public int indexOf(String s)
   {
-    for (int index = 0; index < size; index++)
+    if (contains(s))
     {
-      if (data[index] == s)
+      for (int index = 0; index < size; index++)
       {
-        return index;
+        if (data[index].equals(s))
+        {
+          return index;
+        }
       }
     }
     return -1;
+  }
+  public String[] toArray()
+  {
+    String[] safeArray = new String[size];
+    for (int element = 0; element < size; element++)
+    {
+      safeArray[element] = data[element];
+    }
+    return safeArray;
   }
 }
