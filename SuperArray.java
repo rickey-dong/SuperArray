@@ -66,7 +66,6 @@ public class SuperArray
       if (element == (size - 1))
       {
         newstr = newstr + data[element];
-        newstr = newstr + "]";
       }
       else
       {
@@ -74,6 +73,7 @@ public class SuperArray
         newstr = newstr + ", ";
       }
     }
+    newstr = newstr + "]";
     return newstr;
   }
   public boolean contains(String s)
