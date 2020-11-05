@@ -36,9 +36,19 @@ public class SuperArrayTester
     System.out.println(laughter);
     System.out.println(laughter.contains("xd") + " should be true");
     System.out.println(laughter.contains("hm") + " should be false");
+    laughter.add(2,"kek");
+    System.out.println(laughter + " should be [LOL, lel, kek, lll, ooo, olo, haha, hehe, heh, hah, xd, lul]");
     laughter.clear();
     System.out.println(laughter.size() + " should be 0");
     System.out.println(laughter.get(0) + " should be null");
     System.out.println(laughter.get(1) + " should be null");
+    SuperArray food = new SuperArray(3); //[null, null, null]
+    food.add("cheese");
+    food.add(null);
+    food.add("pizza"); //[cheese,null,pizza]
+    food.add(1,"crust"); //[cheese,crust,null,pizza]
+    System.out.println(food + " should be [cheese, crust, null, pizza]");
+    food.add(3,"pepper"); //[cheese,crust,null,pepper,pizza]
+    System.out.println(food + " should be [cheese, crust, null, pepper, pizza]");
   }
 }

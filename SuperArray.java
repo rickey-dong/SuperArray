@@ -7,10 +7,10 @@ public class SuperArray
     size = 0;
     data = new String[10];
   }
-  public SuperArray(int InitialCapacity)
+  public SuperArray(int initialCapacity)
   {
     size = 0;
-    data = new String[InitialCapacity];
+    data = new String[initialCapacity];
   }
   public int size()
   {
@@ -87,11 +87,23 @@ public class SuperArray
     }
     return false;
   }
-  //public void add(int index, String element)
-  //{
-    //if (index < size)
-    //{
-
-    //}
-  //}
+  public void add(int index, String element)
+  {
+    if (size == data.length)
+    {
+      resize();
+    }
+    for (int tempSize = size; tempSize >= index; tempSize--)
+    {
+      if (tempSize == index)
+      {
+        data[tempSize] = element;
+        size = size + 1;
+      }
+      else
+      {
+        data[tempSize] = data[tempSize-1];
+      }
+    }
+  }
 }
