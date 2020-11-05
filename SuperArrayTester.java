@@ -64,5 +64,19 @@ public class SuperArrayTester
     System.out.println(kwords);
     SuperArray.removeDuplicates(kwords);
     System.out.println(kwords);
+    SuperArray overlapA = new SuperArray(6);
+    overlapA.add("9");
+    overlapA.add("1");
+    overlapA.add("2");
+    overlapA.add("2");
+    overlapA.add("3");
+    overlapA.add("4");
+    SuperArray overlapB = new SuperArray(5);
+    overlapB.add("0");
+    overlapB.add("4");
+    overlapB.add("2");
+    overlapB.add("2");
+    overlapB.add("9");
+    System.out.println(SuperArray.findOverlap( overlapA, overlapB ));
   }
 }
