@@ -56,5 +56,13 @@ public class SuperArrayTester
     System.out.println(food + " should be [crust, sauce, pizza]");
     System.out.println(food.indexOf("crust") + " should be 0");
     System.out.println(food.indexOf("pizza") + " should be 2");
+    SuperArray kwords = new SuperArray();
+    //grouped to save vertical space
+    kwords.add("kani");   kwords.add("uni");     kwords.add("ebi");     kwords.add("una");
+    kwords.add("una");    kwords.add("ebi");     kwords.add("kani");    kwords.add("una");
+    kwords.add("una");    kwords.add("ebi");     kwords.add("toro");
+    System.out.println(kwords);
+    SuperArray.removeDuplicates(kwords);
+    System.out.println(kwords);
   }
 }

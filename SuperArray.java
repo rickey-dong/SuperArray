@@ -146,4 +146,18 @@ public class SuperArray
     }
     return safeArray;
   }
+  public static void removeDuplicates(SuperArray s)
+  {
+    for (int element = (s.size - 1); element > 0; element--)
+    {
+      if (s.indexOf(s.get(element)) == element)
+      {
+        element = element;
+      }
+      else
+      {
+        s.remove(element);
+      }
+    }
+  }
 }
