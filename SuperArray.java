@@ -173,4 +173,18 @@ public class SuperArray
     removeDuplicates(intersect);
     return intersect;
   }
+  public int lastIndexOf(String value)
+  {
+    if (contains(value))
+    {
+      for (int lastIndex = (size - 1); lastIndex >= 0; lastIndex--)
+      {
+        if (data[lastIndex].equals(value))
+        {
+          return lastIndex;
+        }
+      }
+    }
+    return -1;
+  }
 }

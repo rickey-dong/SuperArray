@@ -78,5 +78,6 @@ public class SuperArrayTester
     overlapB.add("2");
     overlapB.add("9");
     System.out.println(SuperArray.findOverlap( overlapA, overlapB ));
+    System.out.println(overlapA.lastIndexOf("2") + " should be 3");
   }
 }
