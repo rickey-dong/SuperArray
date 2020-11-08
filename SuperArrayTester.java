@@ -56,5 +56,9 @@ public class SuperArrayTester
     System.out.println(food + " should be [crust, sauce, pizza]");
     System.out.println(food.indexOf("crust") + " should be 0");
     System.out.println(food.indexOf("pizza") + " should be 2");
+    SuperArray items = new SuperArray();
+    items.add("pencil"); items.add("marker"); items.add("sharpie"); items.add("pencil"); items.add("paper");
+    System.out.println(items.lastIndexOf("pencil") + " should be 3");
+    System.out.println(items.lastIndexOf("pen") + " should be -1");
   }
 }
