@@ -60,5 +60,11 @@ public class SuperArrayTester
     items.add("pencil"); items.add("marker"); items.add("sharpie"); items.add("pencil"); items.add("paper");
     System.out.println(items.lastIndexOf("pencil") + " should be 3");
     System.out.println(items.lastIndexOf("pen") + " should be -1");
+    SuperArray stationery = new SuperArray();
+    stationery.add("pencil"); stationery.add("marker"); stationery.add("sharpie"); stationery.add("pencil"); stationery.add("paper");
+    System.out.println(items.equals(stationery) + " should be true");
+    SuperArray fakeItems = new SuperArray();
+    fakeItems.add("pen"); fakeItems.add("paper"); fakeItems.add("looseleaf"); fakeItems.add("marker");
+    System.out.println(items.equals(fakeItems) + " should be false");  
   }
 }
