@@ -56,28 +56,5 @@ public class SuperArrayTester
     System.out.println(food + " should be [crust, sauce, pizza]");
     System.out.println(food.indexOf("crust") + " should be 0");
     System.out.println(food.indexOf("pizza") + " should be 2");
-    SuperArray kwords = new SuperArray();
-    //grouped to save vertical space
-    kwords.add("kani");   kwords.add("uni");     kwords.add("ebi");     kwords.add("una");
-    kwords.add("una");    kwords.add("ebi");     kwords.add("kani");    kwords.add("una");
-    kwords.add("una");    kwords.add("ebi");     kwords.add("toro");
-    System.out.println(kwords);
-    SuperArray.removeDuplicates(kwords);
-    System.out.println(kwords);
-    SuperArray overlapA = new SuperArray(6);
-    overlapA.add("9");
-    overlapA.add("1");
-    overlapA.add("2");
-    overlapA.add("2");
-    overlapA.add("3");
-    overlapA.add("4");
-    SuperArray overlapB = new SuperArray(5);
-    overlapB.add("0");
-    overlapB.add("4");
-    overlapB.add("2");
-    overlapB.add("2");
-    overlapB.add("9");
-    System.out.println(SuperArray.findOverlap( overlapA, overlapB ));
-    System.out.println(overlapA.lastIndexOf("2") + " should be 3");
   }
 }
