@@ -146,33 +146,19 @@ public class SuperArray
     }
     return safeArray;
   }
-  public static void removeDuplicates(SuperArray s)
-  {
-    for (int element = (s.size - 1); element > 0; element--)
-    {
-      if (s.indexOf(s.get(element)) == element)
-      {
-        element = element;
-      }
-      else
-      {
-        s.remove(element);
-      }
-    }
-  }
-  public static SuperArray findOverlap(SuperArray a, SuperArray b)
-  {
-    SuperArray intersect = new SuperArray(a.size);
-    for (int element = 0; element < a.size; element++)
-    {
-      if (b.contains(a.get(element)))
-      {
-        intersect.add(a.get(element));
-      }
-    }
-    removeDuplicates(intersect);
-    return intersect;
-  }
+  //public static SuperArray findOverlap(SuperArray a, SuperArray b)
+  //{
+    //SuperArray intersect = new SuperArray(a.size);
+    //for (int element = 0; element < a.size; element++)
+    //{
+      //if (b.contains(a.get(element)))
+      //{
+        //intersect.add(a.get(element));
+      //}
+    //}
+    //removeDuplicates(intersect);
+    //return intersect;
+  //}
   public int lastIndexOf(String value)
   {
     if (contains(value))
