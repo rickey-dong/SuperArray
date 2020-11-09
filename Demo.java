@@ -38,6 +38,19 @@ public class Demo
     SuperArray overlapD = new SuperArray();
     overlapD.add("rat"); overlapD.add("cat"); overlapD.add("moose"); overlapD.add("mouse");
     System.out.println(findOverlap(overlapC, overlapD) + " should be [cat, mouse, rat]");
+    SuperArray zipA = new SuperArray();
+    zipA.add("a"); zipA.add("b"); zipA.add("c"); zipA.add("d"); zipA.add("e"); zipA.add("f");
+    SuperArray zipB = new SuperArray();
+    zipB.add("0"); zipB.add("1"); zipB.add("2"); zipB.add("3");
+    System.out.println(zip(zipA, zipB) + " should be [a, 0, b, 1, c, 2, d, 3, e, f]");
+    SuperArray zipC = new SuperArray();
+    zipC.add("a"); zipC.add("b"); zipC.add("c");
+    SuperArray zipD = new SuperArray();
+    zipD.add("0"); zipD.add("1"); zipD.add("2"); zipD.add("3"); zipD.add("4");
+    System.out.println(zip(zipC, zipD) + " should be [a, 0, b, 1, c, 2, 3, 4]");
+    SuperArray zipBlank = new SuperArray();
+    System.out.println(zip(zipC, zipBlank) + " should be [a, b, c]");
+    System.out.println(zip(zipBlank, zipC) + " should be [a, b, c]");
   }
   public static void removeDuplicates(SuperArray s)
   {
@@ -65,5 +78,35 @@ public class Demo
     }
     removeDuplicates(intersect);
     return intersect;
+  }
+  public static SuperArray zip(SuperArray a, SuperArray b)
+  {
+    int maxIterator = 0;
+    if (a.size() < b.size())
+    {
+      maxIterator = b.size();
+    }
+    else
+    {
+      maxIterator = a.size();
+    }
+    SuperArray zipped = new SuperArray(a.size() + b.size());
+    for (int element = 0; element < maxIterator; element++)
+    {
+      if (element >= b.size())
+      {
+        zipped.add(a.get(element));
+      }
+      else if (element >= a.size())
+      {
+        zipped.add(b.get(element));
+      }
+      else
+      {
+        zipped.add(a.get(element));
+        zipped.add(b.get(element));
+      }
+    }
+    return zipped;
   }
 }
