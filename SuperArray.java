@@ -40,6 +40,10 @@ public class SuperArray
   }
   public String set(int index, String element)
   {
+    if (index < 0 || index >= size)
+    {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be out of bounds");
+    }
     String replaced = "";
     replaced = data[index];
     data[index] = element;
@@ -47,7 +51,7 @@ public class SuperArray
   }
   private void resize()
   {
-    String[] largerArray = new String[(data.length * 2)];
+    String[] largerArray = new String[(data.length * 2) + 1];
     for (int value = 0; value < data.length; value++)
     {
       largerArray[value] = data[value];
