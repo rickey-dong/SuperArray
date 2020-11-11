@@ -7,7 +7,14 @@ public class SuperArrayTester
     laughter.add("lol");
     System.out.println(laughter.size() + " should be 1");
     System.out.println(laughter.get(0) + " should be lol");
-    System.out.println(laughter.get(1) + " should be null");
+    try
+    {
+      System.out.println(laughter.get(1));
+    }
+    catch (IndexOutOfBoundsException e)
+    {
+      System.out.println(e);
+    }
     System.out.println(laughter.set(0, "LOL") + " should be lol");
     System.out.println(laughter.get(0) + " should be LOL");
     laughter.add("lel");
@@ -40,8 +47,14 @@ public class SuperArrayTester
     System.out.println(laughter + " should be [LOL, lel, kek, lll, ooo, olo, haha, hehe, heh, hah, xd, lul]");
     laughter.clear();
     System.out.println(laughter.size() + " should be 0");
-    System.out.println(laughter.get(0) + " should be null");
-    System.out.println(laughter.get(1) + " should be null");
+    try
+    {
+      System.out.println(laughter.get(0) + " should be null");
+    }
+    catch (IndexOutOfBoundsException e)
+    {
+      System.out.println(e);
+    }
     SuperArray food = new SuperArray(3); //[null, null, null]
     food.add("cheese");
     food.add("sauce");
@@ -65,6 +78,40 @@ public class SuperArrayTester
     System.out.println(items.equals(stationery) + " should be true");
     SuperArray fakeItems = new SuperArray();
     fakeItems.add("pen"); fakeItems.add("paper"); fakeItems.add("looseleaf"); fakeItems.add("marker");
-    System.out.println(items.equals(fakeItems) + " should be false");  
+    System.out.println(items.equals(fakeItems) + " should be false");
+    System.out.println("=========================Exception Testing with Try/Catch=========================");
+    try
+    {
+      SuperArray testing = new SuperArray(-3);
+    }
+    catch (IllegalArgumentException e)
+    {
+      System.out.println(e);
+    }
+    try
+    {
+      System.out.println(food.set(6,"chicken"));
+    }
+    catch (IndexOutOfBoundsException e)
+    {
+      System.out.println(e);
+    }
+    try
+    {
+      food.add(-5,"beans");
+    }
+    catch (IndexOutOfBoundsException e)
+    {
+      System.out.println(e);
+    }
+    try
+    {
+      System.out.println(food.remove(10));
+    }
+    catch (IndexOutOfBoundsException e)
+    {
+      System.out.println(e);
+    }
+    System.out.println(food);
   }
 }
