@@ -101,6 +101,10 @@ public class SuperArray
   }
   public void add(int index, String element)
   {
+    if (index < 0 || index > size)
+    {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be out of bounds");
+    }
     if (size == data.length)
     {
       resize();
