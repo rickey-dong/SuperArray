@@ -124,6 +124,10 @@ public class SuperArray
   }
   public String remove(int index)
   {
+    if (index < 0 || index >= size)
+    {
+      throw new IndexOutOfBoundsException("The index " + index + " cannot be out of bounds");
+    }
     String removed = data[index];
     for (int tempIndex = index; tempIndex <= size - 1; tempIndex++)
     {
